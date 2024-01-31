@@ -8,17 +8,32 @@
 </head>
 
 <body>
+   <h1>AJAX Request using HTMX</h1>
+   <h2>Using hx-get, hx-post, hx-put, hx-patch, and hx-delete</h2>
+   <!-- Using hx-post and hx-target -->
    <form hx-post="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
       <label for="name">Enter your name:</label>
       <input type="text" id="name" />
       <input type="submit" value="Submit" />
    </form>
+   <!-- Using hx-put and hx-target -->
    <form hx-put="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
       <label for="name">Enter your name:</label>
       <input type="text" id="name" />
       <input type="submit" value="Submit" />
    </form>
+   <form hx-patch="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+   </form>
+   <form hx-delete="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+   </form>
 
+   <!-- hx-target direct the data received from server to html id="result" -->
    <div id="result"></div>
    <script src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous">
