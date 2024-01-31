@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Intro to HTMX</title>
+</head>
+
+<body>
+   <form hx-post="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+   </form>
+   <form hx-put="https://html-mock.fly.dev/tag/paragraph" hx-target="#result">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+   </form>
+
+   <div id="result"></div>
+   <script src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous">
+      </script>
+</body>
+
+</html>
